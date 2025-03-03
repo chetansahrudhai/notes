@@ -1,0 +1,136 @@
+HTML - Hyper Text Markup Language
+- basically tells the browser how to display web pages
+- uses tags and elements to enclose different parts of the content
+
+skeleton -
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+</head>
+<body>
+<div>, <p>, <h1/2/3/4/5/6>, <a href=> etc.
+</body>
+</html>
+
+lists and comments -
+<ol> <li> </li> </ol>
+<ul> <li> </li> </ul>
+<!-- blah -->
+
+images -
+<img src="" alt="" />
+
+links -
+<a href=""> blah </a>
+<a href="mailto:"> mail me </a>
+
+more html -
+<div> </div>
+<header>, <main>, <footer>, <section>, <nav>
+
+------------------------------
+
+CSS - Cascading Style Sheets
+- basically styles and lays out the web pages
+- font, color, spacing, layout, animations and more
+
+rules - selector, properties
+declarations - setting the props to specific values
+
+skeleton example -
+selector {
+    background-color: green;
+    font-size: 36px;
+    font-family: cursive;
+    text-align: center;
+    margin/border/padding-top/bottom/left/right: 6px;
+    width: 24px;
+    height: auto;
+}
+
+------
+the CSS Box Model -
+- each element in an HTML doc is basically a rectangular box
+- each box has 4 edges; margin, border, padding, content
+mnemonic - M B P C
+
+------
+cascading inheritance -
+inherit keyword
+
+------
+type selectors -
+example:
+<!-- affects only ul's that have a header ancestor, not other ul's-->
+header ul {
+    blah: blah;
+}
+
+------
+direct descendants -
+example:
+section > div > h4{
+    blah: blah;
+}
+
+------
+classes -
+use a . to access a class to style
+example:
+.example-class {
+    blah: blah;
+}
+
+<!-- affects only the class3 items which are direct descendants of a class2 item, which is a descendant of class1 item-->
+.example-class1 .example-class2 > .example-class3 {
+    blah: blah;
+}
+
+------
+IDs -
+use a # to access and style the ID'd item
+
+------
+can also  use , to style multiple things at once
+example;
+#example p, h3, h4 {
+    blah: blah;
+}
+
+------
+specificity - (overriding and which has the final say, basically)
+ID > Class > Type selectors
+
+0 - type (h1, div, p etc.)
+1 - class
+2 - ID
+
+------
+pseudo classes have single colon :
+pseudo elements have double colon ::
+
+------
+navbar example -
+nav{
+    background-color: teal;
+    height: 60px;
+    width: 100%;
+    line-height: 50px;
+}
+nav ul{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around/between;
+}
+nav ul li{
+    margin: 10px 10px 0 10px;
+}
+
+etc...
+
+------
+linking external stylesheets -
+<link rel="stylesheet" href="oh_sheet.css">
